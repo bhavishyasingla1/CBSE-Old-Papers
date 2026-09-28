@@ -1,0 +1,50 @@
+[
+  {
+    "text" : "Series: %BAB%\nRoll No.\nSET-4\nQ.P. Code\n91\nCandidates must write the Q.P. Code\non the title page of the answer-book.\nPlease check that this question paper contains 12 printed pages.\nQ.P. Code given on the right hand side of the question paper should be written g\non the title page of the answer-book by the candidate.\nPlease check that this question paper contains 13 questions.\n•\n*****************\nCOMPUTER SCIENCE\nTime allowed : 2 hours\nMaximum Marks : 35\n91\n318\nPage 1\nP.T.O.",
+    "page" : 1
+  },
+  {
+    "text" : "929\nGeneral Instructions :\n(i) This question paper is divided into 3 Sections - A, B and C.\n(ii) Section A, consists of 7 questions (1-7). Each question carries 2 marks.\n(iii) Section B, consists of 3 questions (8-10). Each question carries\n3 marks.\n(iv) Section C, consists of 3 questions (11-13). Each question carries\n4 marks.\n(v) Internal choices have been given for question numbers - 7, 8 and 12.\nSECTION - A\n(Each question carries 2 marks)\n\"Stack is a linear data structure which follows a particular order in which\nthe operations are performed.\"\nWhat is the order in which the operations are performed in a Stack?\nName the List method\/function available in Python which is used to\nremove the last element from a list implemented stack.\nAlso write an example using Python statements for removing the last\nelement of the list.\n2\n(i)\nExpand the following:\nVOIP, PPP\n(ii) Riya wants to transfer pictures from her mobile phone to her laptop.\nShe uses Bluetooth technology to connect two devices. Which type of\nnetwork (PAN\/LAN\/MAN\/WAN) will be formed in this case?\n1\n1\n91\nPage 2",
+    "page" : 2
+  },
+  {
+    "text" : "Differentiate between the terms Attribute and Domain in the context of\nRelational Data Model.\n2\n4. Consider the following SQL table MEMBER in a SQL Database CLUB :\nTable: MEMBER\nM_ID\nM1001\nNAME\nACTIVITY\nAmina\nGYM\nM1002\nPratik\nGYM\nM1003\nSimon\nSWIMMING\nM1004\nRakesh\nGYM\nM1005\nAvneet\nSWIMMING\nAssume that the required library for establishing the connection between\nPython and MYSQL is already imported in the given Python code. Also\nassume that DB is the name of the database connection for table\nMEMBER stored in the database CLUB.\nPredict the output of the following code :\nMYCUR = DB. cursor ()\nMYCUR. execute (\"USE CLUB\")\nMYCUR. execute (\"SELECT * FROM MEMBER WHERE ACTIVITY= 'GYM'\n\")\nR=MYCUR. fetchone ()\nfor i in range (2) :\nR=MYCUR. fetchone ()\nprint (R[Ol, R[ll, sep = \"#\")\n91\nPage 3\n2\nP.T.O.",
+    "page" : 3
+  },
+  {
+    "text" : "5. Write the output of SQL queries (a) to (d) based on the table\nVACCINATION_DATA given below :\nTABLE : VACCINATION_DATA\nVID\n101\n102\n103\nName\nJenny\nHarjot\nSrikanth\nAge\nDosel\nDose2\nCity\n27\n2021-12-25\n2022-01-31\nDelhi\n55\n2021-07-14\n2021-10-14\nMumbai\n43\n2021-04-18\n2021-07-20\nDelhi\n104\nGazala\n75\n2021-07-31\nNULL\nKolkata\n105\nShiksha\n32\n2022-01-01\nNULL\nMumbai\n(a) SELECT Name, Age FROM VACCINATION_DATA\nWHERE Dosed IS NOT NULL AND Age > 40;\n(b) SELECT City, COUNT (*) FROM VACCINATION_DATA GROUP BY City;\n(C) SELECT DISTINCI City FROM VACCINATION_DATA;\n(d) SELECT MAX (Dosel), MIN (Dose2) FROM VACCINATION_DATA;\n91\nWrite the output of SQL queries (a) and (b) based on the following two\ntables DOCTOR and PATIENT belonging to the same database :\nTable : DOCTOR\nDNO\nDNAME\nFEES\nD1\nD2\nD3\nAMITABH\nANIKET\nNIKHIL\nANJANA\n1500\n1000\n1500\n1500\nPage 4\n2\n2",
+    "page" : 4
+  },
+  {
+    "text" : "Table : PATIENT\nPNO\nPNAME\nADMDATE\nP1\nNOOR\n2021-12-25\nP2\nANNIE\n2021-11-20\nP3\nPRAKASH\n2020-12-10\nP4\nHARMEET\n2019-12-20\n(a) SELECT DNAME, PNAME FROM DOCTOR\nNATURAL JOIN PATIENT ;\n(b) SELECT PNAME, ADMDATE, FEES\nFROM PATIENT P, DOCTOR D\nWHERE D.DNO = P. DNO AND FEES > 1000;\nDNO\nD1\nD2\nNULL\nD1\n7.\nDifferentiate between Candidate Key and Primary Key in the context of\nRelational Database Model.\nOR\nConsider the following table PLAYER :\nTable : PLAYER\nPNO\nP1\nP2\nP3\nP4\nP5\nNAME\nRISHABH\nHUSSAIN\nARNOLD\nARNAV\nGURSHARAN\nSCORE\n52\n45\n23\n18\n42\n2\n91\nPage 5\nP.T.O.",
+    "page" : 5
+  },
+  {
+    "text" : "0F0\n(a) Identify and write the name of the most appropriate column from the\ngiven table PLAYER that can be used as a Primary key.\n(b) Define the term Degree in relational data model. What is the Degree\nof the given table PLAYER ?\n91\n•\n•\nSECTION - B\n(Each question carries 3 marks)\nWrite the definition of a user defined function PushNV (N) which\naccepts a list of strings in the parameter N and pushes all strings\nwhich have no vowels present in it, into a list named NoVowel.\nWrite a program in Python to input 5 words and push them one by\none into a list named All.\nThe program should then use the function PushNV () to create a\nstack of words in the list Novowel so that it stores only those words\nwhich do not have\nany vowel present in it, from the list All.\nThereafter, pop each word from the list Novowel and display the\npopped word. When the stack is empty display the message\n\"EmptyStack\".\nFor example :\nIf the Words accepted and pushed into the list All are\n['DRY', 'LIKE'\n'RHYTHM'\n'WORK', 'GYM']\nPage 6\n3",
+    "page" : 6
+  },
+  {
+    "text" : "Then the stack NoVowel should store\n['DRY', 'RHYTHM',\n'GYM' ]\nAnd the output should be displayed as\nGYM RHYTHM DRY EmptyStack\nOR\nWrite the definition of a user defined function Push3_5 (N) which\naccepts a list of integers in a parameter N and pushes all those\nintegers which are divisible by 3 or divisible by 5 from the list N\ninto a list named On1y3_5.\nWrite a program in Python to input 5 integers into a list named NUM.\nThe program should then use the function Push 3_5 () to create the\nstack of the list Only3\n_5. Thereafter pop each integer from the list\nOnly3\n_5 and display the popped value. When the list is empty,\ndisplay the message \"StackEmpty\".\nFor example :\nIf the integers input into the list NUM are :\n110, 6, 14, 18, 301\nThen the stack on1y3_5 should store\n110, 6, 18, 30]\nAnd the output should be displayed as\n30 18 6 10 StackEmpty\n91\nPage 7\nP.T.O.",
+    "page" : 7
+  },
+  {
+    "text" : "9.\n(i) A SQL table ITEMS contains the following columns :\nINO, INAME, QUANTITY, PRICE, DISCOUNI\nWrite the SQL command to remove the column DISCOUNT from the\ntable.\n(ii) Categorize the following SQL commands into DDL and DML :\nCREATE, UPDATE, INSERT, DROP\n10. Rohan is learning to work upon Relational Database Management System\n(RDBMS) application. Help him to perform following tasks :\n(a) To open the database named \"LIBRARY\".\n(b) To display the names of all the tables stored in the opened database.\n(c) To display the structure of the table \"BOOKS\" existing in the already\nopened database \"LIBRARY\".\nSECTION - C\n(Each question carries 4 marks)\n11. Write SQL queries for (a) to (d) based on the tables PASSENGER and\nFLIGHT given below :\nPNO\n1001\n1002\n1003\n1004\nTable :\nNAME\nSuresh\nAnita\nHarjas\nNita\n91\nPASSENGER\nGENDER\nMALE\nFEMALE\nMALE\nFEMALE\nPage 8\nENO\nF101\nF104\nF102\nF103\n1\n2\n3\n4",
+    "page" : 8
+  },
+  {
+    "text" : "Table : FLIGHT\nENO\nF101\nSTART\nMUMBAI\nEND\nCHENNAI\nF_DATE\n2021-12-25\nFARE\nF102\nF103\nMUMBAI\nDELHI\nBENGALURU\nCHENNAI\n2021-11-20\nF104\nF105\nKOLKATA\n2021-12-10\n2021-12-20\nDELHI\nMUMBAI\nBENGALURU\n2021-01-15\n4500\n4000\n5500\n4500\n5000\n(a) Write a query to change the fare to 6000 of the flight whose FNO is\nF104.\n(b) Write a query to display the total number of MALE and FEMALE\nPASSENGERS.\n(c) Write a query to display the NAME, corresponding FARE and F_DATE\nof all PASSENGERS who have a flight to START from DELHI.\n(d) Write a query to delete the records of flights which end at Mumbai.\n12. (i) Differentiate between Bus Topology and Tree Topology. Also, write\none advantage of each of them.\nOR\nDifferentiate between HTML and XML.\n(ii) What is a web browser? Write the names of any two commonly used\nweb browsers.\n2\n2\n91\nPage 9\nP.T.O.",
+    "page" : 9
+  },
+  {
+    "text" : "0R0\n13. Galaxy Provider Ltd. is planning to connect its office in Texas, USA with\nits branch at Mumbai. The Mumbai branch has 3 Offices in three blocks\nlocated at some distance from each other for different operations -\nADMIN, SALES and ACCOUNTS.\nAs a network consultant, you have to suggest the best network related\nsolutions for the issues\/problems raised in (a) to (d), keeping in mind the\ndistances between various locations and other given parameters.\nLayout of the Offices in the Mumbai branch :\n4\nAdmin\nBlock\nsales\nBlock\nAccounts\nBlock\nShortest distances between various locations :\nADMIN Block to SALES Block\nSALES Block to ACCOUNTS Block\nADMIN Block to ACCOUNTS Block\nMUMBAI Branch to TEXAS Head Office\n300 m\n175 m\n350 m\n14000 km\n91\nPage 10",
+    "page" : 10
+  },
+  {
+    "text" : "Number of Computers installed at various locations are as follows :\nADMIN Block\n255\nACCOUNTS Block\n75\nSALES Block\n30\nTEXAS Head Office\n90\n(a) It is observed that there is a huge data loss during the process of\ndata transfer from one block to another. Suggest the most\nappropriate networking device out of the following, which needs to be\nplaced along the path of the wire connecting one block office with\nanother to refresh the signal and forward it ahead.\n(i)\nMODEM\n(ii) ETHERNET CARD\n(iii) REPEATER\n(iv) HUB\n(b)\n(c)\n(d)\nWhich hardware networking device out of the following, will you\nsuggest to connect all the computers within each block ?\n(1)\nSWITCH\n(ii) MODEM\n(iii) REPEATER\n(iv) ROUTER\nWhich service\/protocol out of the following will be most helpful to\nconduct live interactions of employees from Mumbai Branch and\ntheir counterparts in Texas?\n(i)\nFTP\n(iii) SMTP\n(ii) PPP\n(iv) VolP\nDraw the cable layout (block to block) to efficiently connect the three\noffices of the Mumbai branch.\n91\nPage 11",
+    "page" : 11
+  },
+  {
+    "text" : "91\n318\nPage 12",
+    "page" : 12
+  }
+]

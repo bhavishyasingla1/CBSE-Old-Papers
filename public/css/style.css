@@ -1,0 +1,1090 @@
+/* ==========================================================================
+   CODJU CBSE PYQ STUDY TOOL - STEP-BY-STEP DESIGN SYSTEM
+   5 Simple, Sequential Steps: Class -> Subject -> Trends -> PYQs -> Study Plan
+   ========================================================================== */
+
+:root {
+  /* Brand Palette */
+  --purple: #5e17eb;
+  --purple-hover: #4c0fd4;
+  --purple-50: #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+
+  --green: #10b981;
+  --green-hover: #059669;
+  --green-50: #ecfdf5;
+  --green-100: #d1fae5;
+
+  --amber: #f59e0b;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+
+  /* Neutrals */
+  --bg-page: #fafafc;
+  --bg-white: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-hover: #f1f5f9;
+
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  --border: #e2e8f0;
+  --border-subtle: #f1f5f9;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 4px 18px rgba(94, 23, 235, 0.06);
+  --shadow-hover: 0 10px 25px rgba(94, 23, 235, 0.12);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ==========================================================================
+   MINIMAL BRAND HEADER
+   ========================================================================== */
+
+.simple-brand-header {
+  padding: 2.25rem 1.5rem 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.brand-center {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-codju-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-codju-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.logo-codju-link:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.logo-codju-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.logo-codju-footer-img {
+  height: 22px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.logo-pyq-badge {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--purple);
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   STEP-BY-STEP CONTAINER
+   ========================================================================== */
+
+.study-flow-container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  flex: 1;
+}
+
+.flow-step-section {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+  scroll-margin-top: 20px;
+}
+
+.flow-step-section.hidden-step {
+  display: none;
+}
+
+/* Title Block for each step */
+.step-title-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-number-circle {
+  width: 38px;
+  height: 38px;
+  background: var(--purple);
+  color: #fff;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(94, 23, 235, 0.25);
+}
+
+.step-text-wrap {
+  flex: 1;
+}
+
+.step-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.step-heading {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.back-btn-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  transition: all 0.15s ease;
+}
+
+.back-btn-pill:hover {
+  background: var(--purple-100);
+}
+
+/* ==========================================================================
+   STEP 1: CLASS SELECTION
+   ========================================================================== */
+
+.class-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.class-card-btn {
+  background: var(--bg-subtle);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.class-card-btn:hover {
+  background: #fff;
+  border-color: var(--purple);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.class-card-btn.active {
+  background: var(--purple-50);
+  border-color: var(--purple);
+  box-shadow: 0 0 0 2px rgba(94, 23, 235, 0.2);
+}
+
+.class-btn-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.class-btn-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.class-btn-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  font-weight: 800;
+  transition: all 0.15s ease;
+}
+
+.class-card-btn:hover .class-btn-arrow {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+/* ==========================================================================
+   STEP 2: SUBJECT SELECTION
+   ========================================================================== */
+
+.subject-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.85rem;
+}
+
+.subject-item-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.65rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.subject-item-card:hover {
+  border-color: var(--purple);
+  background: var(--purple-50);
+  transform: translateY(-2px);
+}
+
+.subject-item-card.active {
+  background: var(--purple-50);
+  border-color: var(--purple);
+  box-shadow: 0 0 0 2px rgba(94, 23, 235, 0.15);
+}
+
+.subj-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.subj-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.trend-green-tag {
+  color: var(--green);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Selected Subject Summary Banner */
+.selected-subject-summary {
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.summary-subject-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.summary-meta-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sum-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-body);
+}
+
+.sum-badge.purple {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+.sum-badge.green {
+  background: var(--green-50);
+  border-color: var(--green-100);
+  color: var(--green);
+}
+
+/* Quick Navigation / Choice Bar */
+.subject-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.quick-nav-btn {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.quick-nav-btn:hover {
+  border-color: var(--purple);
+  background: var(--purple-50);
+  color: var(--purple);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.quick-nav-btn .nav-icon {
+  font-size: 1rem;
+}
+
+
+/* No Trends Fallback Box */
+.no-trends-box {
+  background: var(--bg-subtle);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.no-trends-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.no-trends-box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.55;
+}
+
+.no-trends-box .btn-jump-direct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: var(--purple);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   STEP 3: EXPLORE QUESTION TRENDS
+   ========================================================================== */
+
+.trends-intro-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.trend-card-unit {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  transition: all 0.15s ease;
+}
+
+.trend-card-unit:hover {
+  border-color: var(--purple-200);
+}
+
+.unit-head-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.unit-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.unit-freq-pill {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: var(--purple-50);
+  color: var(--purple);
+  white-space: nowrap;
+}
+
+.unit-stats-line {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.unit-stats-line strong {
+  color: var(--text-main);
+}
+
+.btn-toggle-evidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.btn-toggle-evidence svg {
+  transition: transform 0.15s ease;
+}
+
+.btn-toggle-evidence.open svg {
+  transform: rotate(180deg);
+}
+
+.unit-evidence-drawer {
+  display: none;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border);
+}
+
+.unit-evidence-drawer.show {
+  display: block;
+}
+
+.q-evidence-item {
+  padding: 0.4rem 0;
+  font-size: 0.82rem;
+  display: flex;
+  gap: 0.65rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.q-evidence-item:last-child {
+  border-bottom: none;
+}
+
+.q-evidence-tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--purple);
+  white-space: nowrap;
+}
+
+/* Tick Matrix Table */
+.trend-matrix-wrapper {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.matrix-header-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.matrix-header-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.tick-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+  font-size: 0.85rem;
+}
+
+.tick-table th, .tick-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tick-table th {
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.tick-table th:first-child, .tick-table td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.tick-green {
+  color: var(--green);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.tick-dash {
+  color: var(--text-light);
+}
+
+/* Priority Callout */
+.priority-callout {
+  background: linear-gradient(135deg, var(--purple-50) 0%, #fff 100%);
+  border: 1.5px solid var(--purple-100);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.35rem;
+  margin-top: 1rem;
+}
+
+.priority-callout-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 0.25rem;
+}
+
+.priority-callout-desc {
+  font-size: 0.88rem;
+  color: var(--text-body);
+}
+
+/* Next Step CTA Row */
+.step-action-row {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-flow-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.65rem;
+  background: var(--purple);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(94, 23, 235, 0.25);
+  transition: all 0.15s ease;
+}
+
+.btn-flow-next:hover {
+  background: var(--purple-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(94, 23, 235, 0.35);
+}
+
+/* ==========================================================================
+   STEP 4: DOWNLOAD QUESTION PAPERS
+   ========================================================================== */
+
+.papers-filter-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.filter-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.flow-select {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  outline: none;
+}
+
+.filter-reset-action {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--purple);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.paper-counter-tag {
+  margin-left: auto;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.papers-flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.single-paper-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.15s ease;
+}
+
+.single-paper-card:hover {
+  border-color: var(--purple-200);
+}
+
+.paper-left-block {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.paper-year-huge {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--purple);
+  min-width: 55px;
+}
+
+.paper-meta-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.paper-exam-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.paper-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.paper-tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-body);
+}
+
+.paper-tag-pill.qp {
+  font-family: var(--font-mono);
+  background: var(--purple-50);
+  border-color: var(--purple-100);
+  color: var(--purple);
+}
+
+.btn-download-pdf-clean {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: var(--purple);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(94, 23, 235, 0.2);
+  transition: all 0.15s ease;
+}
+
+.btn-download-pdf-clean:hover {
+  background: var(--purple-hover);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   STEP 5: SUBJECT-SPECIFIC DETAILED AI STUDY PROMPTS
+   ========================================================================== */
+
+.study-plan-tip-box {
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tip-badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--purple);
+  color: #fff;
+}
+
+.detailed-prompts-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.prompt-study-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.prompt-study-card:hover {
+  border-color: var(--purple-200);
+}
+
+.prompt-card-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.prompt-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.prompt-tagline {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 0.4rem;
+}
+
+.prompt-purpose {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.btn-copy-study-prompt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--purple);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(94, 23, 235, 0.2);
+  transition: all 0.15s ease;
+}
+
+.btn-copy-study-prompt:hover {
+  background: var(--purple-hover);
+  transform: translateY(-1px);
+}
+
+.btn-copy-study-prompt.copied {
+  background: var(--green);
+}
+
+.prompt-code-full {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-body);
+  max-height: 160px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   TOAST
+   ========================================================================== */
+
+.toast-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 300;
+  background: var(--text-main);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.toast-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-icon {
+  background: var(--green);
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   MINIMAL FOOTER
+   ========================================================================== */
+
+.flow-footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.footer-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-divider {
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .study-flow-container {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .flow-step-section {
+    padding: 1.25rem 1rem;
+  }
+
+  .step-heading {
+    font-size: 1.25rem;
+  }
+
+  .single-paper-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-download-pdf-clean {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-flow-next {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,57 @@
+========================================
+CBSE QUESTION PAPER SORTING REPORT
+========================================
+
+Total PDFs discovered: 357
+Total PDFs retained: 301
+Total duplicates deleted: 56
+Total review-required: 0
+
+Classes discovered:
+- Class 10
+- Class 12
+
+Subjects discovered by class:
+
+Class 10:
+- Artificial Intelligence (7 papers)
+- Computer Applications (8 papers)
+- Data Science (4 papers)
+- Electronics and Hardware (3 papers)
+- English (Language and Literature) (87 papers)
+- English Communicative (5 papers)
+- Information Technology (9 papers)
+
+Class 12:
+- Artificial Intelligence (9 papers)
+- Computer Science (10 papers)
+- Data Science (6 papers)
+- Electrical Technology (8 papers)
+- Electronics Technology (8 papers)
+- Electronics and Hardware (5 papers)
+- English (Core) (93 papers)
+- English (Elective) (8 papers)
+- Information Technology (8 papers)
+- Shorthand (English) (4 papers)
+- Typography and Computer Applications (9 papers)
+- Web Applications (10 papers)
+
+Duplicate summary:
+Exact duplicates: 56
+Content-identical duplicates: 0
+Total deleted: 56
+
+Review-required files:
+None. All papers successfully classified with high confidence.
+
+Classification confidence:
+High: 357
+Medium: 0
+Low: 0
+
+Final reconciliation:
+Original (357) = Retained (301) + Deleted Duplicate (56) + Review Required (0)
+301 + 56 + 0 = 357
+
+Result:
+PASS

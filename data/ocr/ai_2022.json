@@ -1,0 +1,34 @@
+[
+  {
+    "page" : 1,
+    "text" : "Series: SQARA\nSET-4\n177-474\/37 104\nQuestion Paper Code No.\nRoll No.\nCandidates must write the Code on\nthe title page of the answer-book.\n*****************\n•\n•\n•\nPlease check that this question paper contains 8 printed pages.\nCode number given on the right hand side of the question paper should be\nwritten on the title page of the answer-book by the candidate.\nPlease check that this question paper contains 21 questions.\nPlease write down the Serial Number of the question in the answer-book\n*********\nbefore attempting it.\npaper will be distributed at 10.15 a.m. From 10.15 a.m. to 10.30 a.m., the\n15 minutes time has been allotted to read this question paper the question d\nstudents will read the question paper only and will not write any answer on the\nanswer-book during this period.\n\/\/********\n0:0\nARTIFICIAL INTELLIGENCE\nTime allowed: 1 hour\nЗАСА : 25\nMaximum Marks: 25\n104\n120\nPage 1\nP.T.O."
+  },
+  {
+    "page" : 2,
+    "text" : "General Instructions :\n(i) Please read the instructions carefully.\n(ii) This question paper is divided into 03 Sections viz., Section A;\nSection B and Section C.\n(iii) Section A is of 05 marks and has 06 questions on Employability skills.\n(a) Question numbers 01 to 04 are one mark questions. Attempt any\nthree questions.\n(b) Questions numbers 05 and 06 are two marks questions. Attempt\nany one question.\n*\n(tv) Section B is of 12 marks and has 12 questions on Subject specific skills.\n(a) Question numbers 07 to 12 are one mark questions. Attempt any\nfour questions.\n(b) Question numbers 13 to 18 are two marks questions. Attempt any\nfour questions.\n(v) Section Cis of 08 marks and has 03 Competency-based questions.\nQuestion numbers 19 to 21 are four marks questions. Attempt any two\nquestions.\n(vi) Do as per the instructions given in the respective sections.\n(vil) Marks allotted are mentioned against each section\/ question.\nSection - A\nAnswer any 3 questions out of given 4 questions.\nWhat is wage employment?\n(3 + 2 = 5 marks)\n1 × 3 = 3\n1\n104\nPage 2"
+  },
+  {
+    "page" : 3,
+    "text" : "2. How food is one of the major problems related to sustainable development ?\nDiscuss briefly.\n1\n\"To get success, every business idea needs to be unique or special.\"\nIs the above statement a myth or fact ?\n1\n4.\nWhat is the major purpose of the Sustainable Development Goals?\n1\n5.\nAnswer any 1 question out of the given 2 questions.\nWrite any four common functions of an entrepreneur.\n2×1=2\n2\nSustainable development can actually happen only when each one of us\nworks towards it. Mention any four ways which we can do at our end to\nreduce inequality.\n2\n7.\nSection - B\nAnswer any 4 questions out of the given 6 questions.\nWhat is NLP?\n(4 + 8 = 12 marks)\n1 × 4 = 4\n1\n8.\nMention any two commonly used applications of NLP.\n1\n104\nPage 3\nP.T.O."
+  },
+  {
+    "page" : 4,
+    "text" : "040\n9. Name any two currently popular virtual assistants.\n1\n10. Name the process of dividing whole corpus into sentences.\n1\n11. With reference to evaluation process of understanding the reliability of\nany AI model, define the term True Positive.\n1\n12. What is F1 score ?\n1\nAnswer any 4 questions out of the given 6 questions.\n13. Differentiate between Script-bot and Smart-bot.\n2 × 4 = 8\n2\n14. What is the purpose of Evaluation stage of AI project cycle ? Discuss briefly. 2\n15. What is Tokenization ? Count how many tokens are present in the\nfollowing statement :\nI find that the harder I work, the more luck I seem to have.\n2\n104\nPage 4"
+  },
+  {
+    "page" : 5,
+    "text" : "16. Kaira, a beginner in the field of NLP is trying to understand the process\nof Stemming. Help her in filling up the following table by suggesting\nappropriate affixes and stem of the words mentioned there :\nS. No.\nWord\nAffixes\nStem\ni.\nTries\nii.\nLearning\n2\n17. With reference to evaluation stage of AI project cycle, explain the term\nAccuracy. Also give the formula to calculate it.\n2\n18. Explain the following picture which depicts one of the processes on NLP.\nAlso mention the purpose which will be achieved by this process.\nHELLO\nHeLlo\nHELLO hELLO\nhEILO\nHello\n2\n104\nhello\nPage 5\nP.T.O."
+  },
+  {
+    "page" : 6,
+    "text" : "940\nSection - C\n(COMPETENCY-BASED QUESTIONS)\nAnswer any 2 questions out of the given 3 questions.\n(4x2=8 marks)\n19. Consider the text of following documents :\n4\nDocument 1 : Sahil likes to play cricket\nDocument 2 : Sajal likes cricket too\nDocument 3: Sajal also likes to play basketball\nApply all the four steps of Bag of words model of NLP on the above given\ndocuments and generate the output.\n20. With reference to NLP, explain the following terms in detail with the help\nof suitable example :\n4\nTerm frequency\n•\nInverse Document Frequency\n104\nPage 6"
+  },
+  {
+    "page" : 7,
+    "text" : "979\n21. Traffic Jams have become a common part of our lives now-a-days. Living\nin an urban area means you have to face traffic each and every time you\nget out on the road. Mostly, school students opt for buses to go to school.\nMany times the bus gets late due to such jams and students are not able\nto reach their school on time. Thus,\nan AI model is created to predict\nexplicitly if there would be a traffic jam on their way to school or not. The\nconfusion matrix for the same is\nThe Confusion Matrix\nActual : 1\nActual : 0\nPredicted : 1\n50\n50\nPredicted : 0\nExplain the process of calculating F1 score for the given problem.\n4\n104\nPage 7"
+  },
+  {
+    "page" : 8,
+    "text" : "104\n120\nPage 8"
+  }
+]
