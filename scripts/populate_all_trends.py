@@ -10,7 +10,7 @@ import json
 import os
 import re
 
-WORKSPACE_DIR = "/Users/bhavishyasingla/Projects/CBSE Old Papers - Sorted"
+WORKSPACE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(WORKSPACE_DIR, "data", "cbse_study.db")
 DATASET_PATH = os.path.join(WORKSPACE_DIR, "data", "dataset.json")
 
@@ -457,7 +457,7 @@ def main():
             "sha256": r[14],
             "confidence": r[15],
             "evidence": r[16],
-            "download_url": f"/api/download/{r[0]}"
+            "download_url": r[11]
         })
 
     # Rebuild dataset.json with full papers list

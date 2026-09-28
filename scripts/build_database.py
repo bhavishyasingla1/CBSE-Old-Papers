@@ -181,7 +181,7 @@ def main():
             "sha256": sha256,
             "confidence": confidence,
             "evidence": evidence,
-            "download_url": f"/api/download/{paper_id}"
+            "download_url": file_path
         }
         papers_list.append(p_obj)
         paper_lookup[paper_id] = p_obj

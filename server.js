@@ -31,6 +31,7 @@ dataset.classes.forEach(c => {
 
 // Middleware
 app.use(express.json());
+app.use(express.static(WORKSPACE_DIR));
 app.use(express.static(path.join(WORKSPACE_DIR, 'public')));
 
 // Serve raw PDFs directly if accessed via /papers/...
